@@ -2,7 +2,15 @@
 
 **简约的 Android 中英文输入法 · A minimal Chinese & English keyboard for Android**
 
-[下载 / Download v2.3.3](https://github.com/claudepara47-dot/gpt-input/releases/tag/v2.3.3) · Android 12+ · GPL-3.0-or-later
+[下载 / Download v2.3.4](https://github.com/claudepara47-dot/gpt-input/releases/tag/v2.3.4) · Android 12+ · GPL-3.0-or-later
+
+## 2.3.4 更新 / What's new
+
+改进底部布局；新增超强纠错、高置信度候选补充、删除后纠错；学习前确认保留 3 秒；基础词权重与个人词分开保存；支持可调半衰期、自定义衰减公式和括号配对。空格键显示 **Space**。
+
+Improved bottom layout; Ultra correction, alternative candidates, and suggestions after deletion; a three-second confirmation before learning; separate base-word usage weights; configurable half-life, custom decay formulas, and paired brackets. The spacebar now reads **Space**.
+
+[中英双语更新说明 / Bilingual changelog](CHANGELOG-2.3.4.md)
 
 ## 中文
 
@@ -13,7 +21,7 @@ GPT input 将本地中英文输入与可自行配置的大模型指令结合。�
 | 功能 | 说明 |
 | --- | --- |
 | 中英文输入 | 中文基于 Rime、Trime JNI 与雾凇拼音，支持全拼、简拼、整句候选；英文直接上屏，提供补全和纠错建议 |
-| 候选与学习 | 停顿后刷新候选，刷新间隔可调；学习常用词和相邻组合，中英文词库独立管理、编辑 |
+| 候选与学习 | 停顿后刷新候选，刷新间隔可调；五档拼音纠错；确认保留后学习，基础词使用权重与个人词分开保存；支持自定义衰减，中英文词库独立管理 |
 | 编辑与剪贴板 | 方向键、选择、复制、剪切、粘贴、清空及短暂撤销；剪贴板采用表格布局 |
 | 符号与主题 | 希腊字母、数学符号等分类符号库；主题色可自定义，默认橙色 |
 | AI 指令 | 支持 OpenAI 兼容的 Chat Completions 接口、模型列表、可编辑系统提示词及命名指令；安全校验通过后直接替换指令 |
@@ -21,7 +29,7 @@ GPT input 将本地中英文输入与可自行配置的大模型指令结合。�
 
 ### 快速使用
 
-1. 从发布页下载 **GPT-input-2.3.3.apk** 并安装。打开 App，依次使用 **启用**、**选择输入法**，在系统列表中选择 **GPT input**。
+1. 从发布页下载 **GPT-input-2.3.4.apk** 并安装。打开 App，依次使用 **启用**、**选择输入法**，在系统列表中选择 **GPT input**。
 2. 点击键盘上的 **中/英** 切换语言。中文点击候选上屏；英文点击候选替换当前词并追加空格，直接按空格保留原拼写。中文预览仍有内容时，**Enter** 会将预览原样上屏。
 3. 英文 Shift 点一次为单字母大写，再点一次锁定；中文 Shift 点一次即锁定，再点解除。
 4. 在 App 的 AI 设置中填写 **HTTPS Base URL**（含服务商要求的版本路径，例如 `/v1`）、**API Key** 和**模型**；可获取模型列表并测试连接。提示词与指令页面可编辑系统提示词、指令名称和内容。
@@ -42,7 +50,7 @@ GPT input combines an offline Chinese and English keyboard with an optional, use
 | Feature | Description |
 | --- | --- |
 | Chinese & English input | Rime, Trime JNI, and Rime Ice power Chinese full pinyin, abbreviated pinyin, and sentence candidates; English text is entered directly with completion and spelling suggestions |
-| Suggestions & learning | Candidates refresh after a pause, with an adjustable interval; frequent words and adjacent word combinations are learned locally, with separate Chinese and English vocabulary management |
+| Suggestions & learning | Adjustable pause-based suggestions and five pinyin correction levels; confirmed local learning, separate base-word usage weights, custom decay, and separate Chinese and English vocabulary management |
 | Editing & clipboard | Cursor controls, selection, copy, cut, paste, clear, and short-lived undo; a grid-based clipboard |
 | Symbols & themes | Categorized Greek letters, mathematical symbols, and more; customizable accent color |
 | AI commands | OpenAI-compatible Chat Completions, model listing, editable system prompts, and named commands; results replace the command after editor safety checks |
@@ -50,7 +58,7 @@ GPT input combines an offline Chinese and English keyboard with an optional, use
 
 ### Quick start
 
-1. Download **GPT-input-2.3.3.apk** from the release page and install it. Open the app, tap **启用** (Enable), then **选择输入法** (Choose keyboard), and select **GPT input** in Android's keyboard list.
+1. Download **GPT-input-2.3.4.apk** from the release page and install it. Open the app, tap **启用** (Enable), then **选择输入法** (Choose keyboard), and select **GPT input** in Android's keyboard list.
 2. Tap **中/英** to switch languages. Select a Chinese candidate to commit it. In English, selecting a suggestion replaces the current word and adds a space; pressing Space keeps the original spelling. When a Chinese composition preview is present, **Enter** commits that preview as typed.
 3. In English, tap Shift once for one uppercase letter and again for Caps Lock. In Chinese mode, one tap locks uppercase; tap again to unlock.
 4. In AI settings, enter an **HTTPS Base URL** (including the provider's version path, such as `/v1`), **API Key**, and **model**. Fetch the model list or test the connection as needed. Edit the system prompt and named commands on the prompts and commands page.
@@ -64,17 +72,17 @@ GPT input combines an offline Chinese and English keyboard with an optional, use
 
 ## 下载与源码 / Downloads & source
 
-Use the [v2.3.3 release assets](https://github.com/claudepara47-dot/gpt-input/releases/tag/v2.3.3):
+Use the [v2.3.4 release assets](https://github.com/claudepara47-dot/gpt-input/releases/tag/v2.3.4):
 
 | 文件 / File | 内容 / Contents |
 | --- | --- |
-| `GPT-input-2.3.3.apk` | 签名安装包 / Signed Android installer |
-| `GPT-input-source-2.3.3.zip` | 完整源码、词库、原生依赖源码、构建说明及现有中文手册 / Complete source, dictionaries, native dependency sources, build instructions, and the existing Chinese manual |
-| `SHA256SUMS-2.3.3.txt` | 文件校验值 / File checksums |
+| `GPT-input-2.3.4.apk` | 签名安装包 / Signed Android installer |
+| `GPT-input-source-2.3.4.zip` | 完整源码、词库、原生依赖源码、构建说明及现有中文手册 / Complete source, dictionaries, native dependency sources, build instructions, and the existing Chinese manual |
+| `SHA256SUMS-2.3.4.txt` | 文件校验值 / File checksums |
 
-完整可构建源码在上方命名的 ZIP 附件中；GitHub 自动生成的 “Source code” 压缩包只对应本介绍仓库。解压后阅读源码根目录的 `README.md`；构建使用 JDK 17、Gradle 8.11.1 和 Android SDK 35。现有详细手册标注为 2.3.2；2.3.3 保留其操作方式，将回车图标显示为 Enter。
+完整可构建源码在上方命名的 ZIP 附件中；GitHub 自动生成的 “Source code” 压缩包只对应本介绍仓库。解压后阅读源码根目录的 `README.md`；构建使用 JDK 17、Gradle 8.11.1 和 Android SDK 35。现有详细手册标注为 2.3.2；新增设置与操作见 [2.3.4 更新说明](CHANGELOG-2.3.4.md) 及源码内 `CHANGES-2.3.4.md`。
 
-The complete buildable source is the explicitly named ZIP asset above. GitHub's automatically generated “Source code” archives contain only this introduction repository. After extraction, see the source root's `README.md`. Build with JDK 17, Gradle 8.11.1, and Android SDK 35. The existing detailed manual is labeled 2.3.2; version 2.3.3 retains those operations and displays the return key as Enter.
+The complete buildable source is the explicitly named ZIP asset above. GitHub's automatically generated “Source code” archives contain only this introduction repository. After extraction, see the source root's `README.md`. Build with JDK 17, Gradle 8.11.1, and Android SDK 35. The existing detailed manual is labeled 2.3.2; see the [2.3.4 changelog](CHANGELOG-2.3.4.md) and `CHANGES-2.3.4.md` in the source package for new settings and behavior.
 
 ## 许可与致谢 / License & credits
 
