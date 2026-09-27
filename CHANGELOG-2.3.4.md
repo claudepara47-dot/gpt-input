@@ -70,8 +70,8 @@ Install **GPT-input-2.3.4.apk** over the existing app; do not uninstall first. T
 | --- | --- |
 | `GPT-input-2.3.4.apk` | 签名安装包 / Signed APK |
 | `GPT-input-source-2.3.4.zip` | 完整可构建源码、词库、原生依赖源码和构建说明 / Complete buildable source, dictionaries, native dependency sources, and build instructions |
-| `更新说明-2.3.4.md` | 中文详细更新说明 / Detailed Chinese changelog |
-| `测试报告-2.3.4.md` | 测试结果与性能评测范围 / Test results and performance measurement scope |
+| `CHANGES-2.3.4.md` | 中文详细更新说明 / Detailed Chinese changelog |
+| `TEST-REPORT-2.3.4.md` | 测试结果与性能评测范围 / Test results and performance measurement scope |
 | `SHA256SUMS-2.3.4.txt` | 上述四个文件的 SHA-256 / SHA-256 checksums for the four files above |
 
 请下载命名的 **GPT-input-source-2.3.4.zip** 获取完整源码；GitHub 自动生成的 “Source code” 包只包含介绍仓库。源码包不包含发布私钥或 API Key。现有详细手册标注为 2.3.2，新功能请参考本页与源码内 `CHANGES-2.3.4.md`。
